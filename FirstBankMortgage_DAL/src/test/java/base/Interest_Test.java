@@ -8,7 +8,7 @@ import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
-public class Student_Test {
+public class Interest_Test {
 
 	@BeforeClass
 	public static void setUpBeforeClass() throws Exception {
@@ -28,9 +28,11 @@ public class Student_Test {
 
 	@Test
 	public void test() {
-		//FinalExam - Add some meaningful junit tests.
-		assertTrue(1==1);
-		StudentDAL.getStudents();
+		double testInterestRate = RateDAL.getRate(500);
+		assertFalse(testInterestRate == 1);
+		
+		double testInterestRate1 = RateDAL.getRate(600);
+		assertFalse(testInterestRate1 == 1);
 	}
 
 }
